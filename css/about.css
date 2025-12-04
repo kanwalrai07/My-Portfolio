@@ -1,0 +1,99 @@
+/* About page enhancements (glass + portrait + layout) */
+
+:root {
+  --bg: #0d0d10;
+  --card-bg: rgba(18,18,20,0.62);
+  --glass-border: rgba(255,255,255,0.03);
+  --primary: #ff00ff;
+  --secondary: #00ffff;
+  --muted: rgba(220,230,240,0.65);
+  --radius: 14px;
+}
+
+/* Page layout */
+.about-main { padding: 100px 5% 80px; min-height: calc(100vh - 180px); }
+.about-hero { max-width:1200px; margin:0 auto; }
+.about-grid { display:grid; grid-template-columns: 360px 1fr; gap:28px; align-items:start; }
+
+/* Responsive */
+@media (max-width: 980px) {
+  .about-grid { grid-template-columns: 1fr; gap:20px; }
+  .portrait-wrap { order: -1; }
+}
+
+/* Portrait column */
+.portrait-wrap { display:flex; flex-direction:column; gap:16px; align-items:center; }
+
+.portrait-frame {
+  width: 320px; height: 320px; border-radius: 18px; position:relative;
+  overflow:hidden; display:flex; align-items:center; justify-content:center;
+  background: linear-gradient(135deg, rgba(0,255,255,0.08), rgba(255,0,255,0.08));
+  border: 1px solid var(--glass-border); box-shadow: 0 18px 60px rgba(0,0,0,0.7);
+  transform-style: preserve-3d; transition: transform 0.28s cubic-bezier(.2,.9,.3,1);
+}
+
+/* image inside */
+.portrait-frame img.portrait-img {
+  width:100%; height:100%; object-fit:cover; display:block; transform-origin:center;
+}
+
+/* decorative polygon overlay */
+.portrait-frame::after {
+  content:""; position:absolute; inset:0; pointer-events:none;
+  background: linear-gradient(120deg, rgba(0,255,255,0.12), rgba(255,0,255,0.12));
+  mix-blend-mode: overlay; clip-path: polygon(10% 0, 90% 0, 100% 30%, 75% 90%, 25% 100%, 0 70%);
+  opacity:0.95;
+}
+
+/* name tag overlay */
+.portrait-tag {
+  position:absolute; left:12px; bottom:12px; color:#061019; background:linear-gradient(90deg,var(--primary),var(--secondary));
+  padding:8px 12px; border-radius:8px; font-weight:900; letter-spacing:0.6px; font-size:0.9rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* quick links */
+.quick-links { display:flex; gap:10px; margin-top:6px; flex-wrap:wrap; justify-content:center; width:100% }
+.quick-btn {
+  display:inline-block; padding:10px 14px; border-radius:10px; background:linear-gradient(90deg,var(--primary),var(--secondary));
+  color:#061019; font-weight:800; text-decoration:none;
+}
+.quick-btn.outline { background:transparent; border:1px solid rgba(255,255,255,0.06); color:var(--muted) }
+
+/* Right card */
+.about-card.card {
+  padding:22px; border-radius:var(--radius); background: var(--card-bg); border:1px solid var(--glass-border);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
+
+/* headers */
+.card-header .title { font-size:1.25rem; font-weight:900; margin-bottom:4px; color:transparent; background:linear-gradient(90deg,var(--primary),var(--secondary)); -webkit-background-clip:text; background-clip:text; }
+.card-header .subtitle { color:var(--muted); margin-bottom:10px; font-weight:700 }
+
+/* body */
+.lead { color:#eaf7ff; line-height:1.6; margin-bottom:12px }
+.contact-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:12px; margin-bottom:12px }
+.contact-grid .muted { color:var(--muted); font-weight:600; margin-top:4px }
+
+/* separator */
+.sep { border:none; height:1px; background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); margin:12px 0 }
+
+/* sections */
+.section-heading { color: var(--primary); margin-top:8px; margin-bottom:8px; font-weight:900; font-size:1rem; }
+.edu-list { display:flex; flex-direction:column; gap:10px; margin-bottom:10px }
+.edu-item h4 { margin:0; font-size:1rem; color:#fff; font-weight:800 }
+.edu-item .muted { color:var(--muted); font-size:0.95rem }
+
+/* certs */
+.cert-list { margin:0; padding-left:20px; color:#eaeff5; }
+.cert-list li { margin-bottom:8px; line-height:1.4 }
+.cert-link { color:var(--secondary); margin-left:8px; text-decoration:underline }
+
+/* highlights */
+.highlights p { color:#e7f6ff; line-height:1.6; margin-top:8px; }
+
+/* small devices */
+@media (max-width:480px) {
+  .portrait-frame { width:220px; height:220px; }
+  .contact-grid { grid-template-columns:1fr; }
+}

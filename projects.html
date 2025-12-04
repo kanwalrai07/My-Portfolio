@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projects — Kanwal Rai</title>
+  <meta name="description" content="Projects by Kanwal Rai — Library system, Car Fixers website, Parking system, Inventory (AWS)." />
+  <!-- CSS files -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/projects.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><div class="logo-text">KANWAL RAI</div></div>
+    <div class="menu-toggle">☰</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="projects-section">
+      <div class="section-header">
+        <h2 class="section-title">Projects</h2>
+        <div class="underline"></div>
+      </div>
+
+      <div class="projects-filter">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="cpp">C++</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="cloud">Cloud</button>
+      </div>
+
+      <div class="projects-grid">
+
+        <article class="project-card" data-category="cpp">
+          <div class="project-img">
+            <img src="placeholder-project1.jpg" alt="Library Management System">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a class="project-link" href="https://github.com/kanwalrai07" aria-label="Repo" target="_blank" rel="noopener">Repo</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Library Management System</h3>
+            <p class="project-description">
+              A C++ system to automate lending, returns, and record management — improved data accuracy and reduced manual effort.
+            </p>
+            <div class="project-tech"><span>C++</span></div>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="web">
+          <div class="project-img">
+            <img src="placeholder-project2.jpg" alt="Car Fixers Website">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a class="project-link" href="https://github.com/kanwalrai07" aria-label="Repo" target="_blank" rel="noopener">Repo</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Car Fixers Website</h3>
+            <p class="project-description">
+              Responsive site built with HTML/CSS/Bootstrap to manage bookings and customer interactions, improving online presence.
+            </p>
+            <div class="project-tech"><span>HTML</span><span>CSS</span><span>Bootstrap</span></div>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="cpp">
+          <div class="project-img">
+            <img src="placeholder-project3.jpg" alt="Car Parking System">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a class="project-link" href="https://github.com/kanwalrai07" aria-label="Repo" target="_blank" rel="noopener">Repo</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Car Parking Management System</h3>
+            <p class="project-description">
+              Automated entry/exit handling and fee calculation implemented in C++ to streamline parking operations.
+            </p>
+            <div class="project-tech"><span>C++</span></div>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="cloud">
+          <div class="project-img">
+            <img src="placeholder-project4.jpg" alt="Inventory Management (Cloud)">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a class="project-link" href="https://github.com/kanwalrai07" aria-label="Repo" target="_blank" rel="noopener">Repo</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Inventory Management System (Cloud)</h3>
+            <p class="project-description">
+              Scalable cloud-based inventory app using C#, SQL and AWS EC2 for real-time stock management and synchronization across endpoints.
+            </p>
+            <div class="project-tech"><span>C#</span><span>AWS EC2</span><span>SQL</span></div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- JS files -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="js/particles-config.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/projects.js" defer></script>
+</body>
+</html>
