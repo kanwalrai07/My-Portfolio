@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,user-scalable=yes" />
+  <title>Contact — Kanwal Rai</title>
+  <meta name="description" content="Contact Kanwal Rai — get in touch for internships, projects and collaboration." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <div class="logo-text">KANWAL RAI</div>
+    </div>
+    <div class="menu-toggle">☰</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="https://docs.google.com/document/d/15Byc0P46kwvZQayxmxle-hfbQraTWmb-/edit?usp=drive_link"
+            target="_blank" rel="noopener">Resume</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="particles-js" aria-hidden="true"></div>
+
+  <main class="contact-main container">
+    <section class="contact-hero">
+      <div class="section-header">
+        <h1 class="page-title">Get in touch</h1>
+        <div class="lead">Open to internships, collaboration and freelance work. Fill the form and I will get back
+          within 48 hours.</div>
+      </div>
+
+      <div class="contact-grid">
+        <aside class="contact-card card glass info-card" aria-labelledby="contact-info-heading">
+          <h2 id="contact-info-heading" class="card-title">Contact Info</h2>
+          <p class="card-desc">Prefer email? Send me a message or use the form on the right.</p>
+
+          <dl class="contact-list">
+            <div class="contact-row">
+              <dt class="contact-label">📞 Phone</dt>
+              <dd class="contact-value">03080596460</dd>
+            </div>
+
+            <div class="contact-row">
+              <dt class="contact-label">✉️ Email</dt>
+              <dd class="contact-value"><a href="mailto:kanwalrai09@gmail.com">kanwalrai09@gmail.com</a></dd>
+            </div>
+
+            <div class="contact-row">
+              <dt class="contact-label">📍 Location</dt>
+              <dd class="contact-value">Karachi, Pakistan</dd>
+            </div>
+
+            <div class="contact-row">
+              <dt class="contact-label">🔗 Links</dt>
+              <dd class="contact-value links">
+                <a href="https://github.com/kanwalrai07" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/kanwal-rai/" target="_blank" rel="noopener">LinkedIn</a>
+              </dd>
+            </div>
+          </dl>
+
+          <div class="info-actions">
+            <a class="btn btn-primary" href="mailto:kanwalrai09@gmail.com">Email Me</a>
+            <a class="btn btn-secondary"
+              href="https://docs.google.com/document/d/15Byc0P46kwvZQayxmxle-hfbQraTWmb-/edit?usp=drive_link"
+              target="_blank" rel="noopener">Download Resume</a>
+          </div>
+        </aside>
+
+        <div class="form-card card glass" aria-labelledby="form-title">
+          <h2 id="form-title" class="card-title">Send a message</h2>
+
+          <form id="contact-form" novalidate>
+            <div class="form-row">
+              <label for="name">Your name</label>
+              <input id="name" name="name" type="text" autocomplete="name" placeholder="John Doe" required>
+              <div class="field-error" id="err-name" aria-live="polite"></div>
+            </div>
+
+            <div class="form-row">
+              <label for="email">Email address</label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="your@mail.com" required>
+              <div class="field-error" id="err-email" aria-live="polite"></div>
+            </div>
+
+            <div class="form-row">
+              <label for="subject">Subject</label>
+              <input id="subject" name="subject" type="text" placeholder="Project / Opportunity" required>
+              <div class="field-error" id="err-subject" aria-live="polite"></div>
+            </div>
+
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="6" placeholder="Brief description..." required></textarea>
+              <div class="field-error" id="err-message" aria-live="polite"></div>
+            </div>
+
+            <div class="form-actions">
+              <button id="submit-btn" class="submit-btn btn btn-primary" type="submit">
+                <span class="btn-text">Send message</span>
+                <span class="btn-loader" style="display:none;">
+                  <span class="spinner"></span>
+                  <span>Sending...</span>
+                </span>
+              </button>
+              <div id="form-status" class="form-status" aria-live="polite"></div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="js/particles-config.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/contact.js" defer></script>
+</body>
+
+</html>
